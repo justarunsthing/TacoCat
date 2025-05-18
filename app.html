@@ -45,7 +45,44 @@
         </nav>
         <main class="flex-shrink-0">
             <div class="container">
-
+                <div class="container mt-5">
+                    <div class="row row-cols-1 row-cols-lg-2">
+                        <div class="col">
+                            <h1 class="display-6 fw-bold lh-1 mb-3">
+                                TacoCat: A coding project
+                            </h1>
+                            <h4 class="lead pb-3">
+                                Tacocat is a palindrome. A palindrome is a word, phrase, or a sequence
+                                that reads the same forward and backward. Write a program that checks if
+                                the phrase is a palindrome.
+                            </h4>
+                        </div>
+                        <div class="col">
+                            <h5 class="border-1 border-bottom border-danger">
+                                Enter a word or a phrase to check:
+                            </h5>
+                            <form class="row gx-3 gy-2 pt-2 pb-2">
+                                <div class="col">
+                                    <input id="user-string" type="text" class="form-control" placeholder="Enter a word or a phrase" aria-label="Enter a word or a phrase"/>
+                                </div>
+                                <div class="col-12 pt-2">
+                                    <button id="btn-submit" type="button" class="btn btn-primary">
+                                        Check it!
+                                    </button>
+                                </div>
+                                <div id="alert" role="alert" class="alert alert-info mt-3 invisible fade show">
+                                    <h4 id="alert-header" class="alert-heading">
+                                        Well done!
+                                    </h4>
+                                    <hr />
+                                    <p id="message" class="mb-0">
+                                        <!-- Message goes here -->
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
         <footer class="footer mt-auto py-3 sticky-footer theme-color">
