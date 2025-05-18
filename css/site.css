@@ -1,8 +1,8 @@
 :root {
     --primary-color: #1D5888;
-    --secondary-color: #FF993B;
+    --secondary-color: #FB0424;
     --dark-color: #292929;
-    --white-color: #E7E7E7;
+    --white-color: #DFF3E4;
 }
 
 body {
@@ -71,4 +71,8 @@ code[class*="language-"], pre[class*="language-"] {
     white-space: pre-wrap;
     word-break: break-all;
     word-wrap: break-word;
+}
+
+.theme-color {
+    background-color: #7D044B;
 }
