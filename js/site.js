@@ -39,3 +39,7 @@ function displayMessage(returnObj) {
     document.getElementById("message").innerHTML = `Your phrase reversed is ${returnObj.reversed}`;
     document.getElementById("alert").classList.remove("invisible");
 }
+
+// Set date
+const currentYear = new Date().getFullYear();
+document.getElementById("year").textContent = `©${currentYear}`;
