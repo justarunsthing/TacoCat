@@ -2,7 +2,13 @@
 function getValue() {
     document.getElementById("alert").classList.add("invisible");
 
-    let userString = document.getElementById("user-string").value;
+    let userString = document.getElementById("user-string").value.trim();
+
+    // Ignore empty or non-alphanumeric only strings
+    if (!userString.replace(/[^a-z0-9]/gi, "")) {
+        return;
+    }
+
     let returnObj = palindromeCheck(userString);
 
     displayMessage(returnObj);
@@ -23,9 +29,9 @@ function palindromeCheck(userString) {
     }
 
     if (reversedString == userString) {
-        returnObj.msg = "Well done, you entered a palindrome!";
+        returnObj.msg = `Well done, "${userString}" is a palindrome!`;
     } else {
-        returnObj.msg = `Oops, ${userString} is not a palindrome!`;
+        returnObj.msg = `Oops, "${userString}" is not a palindrome!`;
     }
 
     returnObj.reversed = reversedString;
@@ -36,7 +42,7 @@ function palindromeCheck(userString) {
 // Display message to the user
 function displayMessage(returnObj) {
     document.getElementById("alert-header").innerHTML = returnObj.msg;
-    document.getElementById("message").innerHTML = `Your phrase reversed is ${returnObj.reversed}`;
+    document.getElementById("message").innerHTML = `Your phrase reversed is "${returnObj.reversed}"`;
     document.getElementById("alert").classList.remove("invisible");
 }
 
